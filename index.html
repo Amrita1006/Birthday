@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@2.18.1/dist/core.js"></script>
+</head>
+<body>
+
+  <!-- Initial Cake & Button -->
+  <div class="intro" id="intro">
+    <div class="cake-container">
+      <img src="assets/cake.png" alt="Birthday Cake" class="cake">
+      <div class="candles" id="candles">
+        <div class="flame"></div>
+      </div>
+    </div>
+    <button id="confetti-btn" class="confetti-button">🎈  Click Here to Blow the Candle 🎂</button>
+  </div>
+
+  <div id="typewriter-text"></div>
+
+  <!-- Hidden Until Button Click -->
+  <div class="main-content hidden" id="mainContent">
+    <h1 id="birthday-title">🎉 🎀Happy Birthday, LIPSA!🎀 🎂</h1>
+    <h2 id="birthday-title">🌸🌸🌻🌻 </h2>
+    <p id="typewriter-text" class="message"></p>
+    <div>
+      <button id="memory-btn" class="confetti-button">📷Memory DownLine</button>
+    </div>
+  </div>
+
+  <div class="main-content hidden" id="gallerysection">
+
+    <!-- ✅ Full Slideshow with 30 Images + 10 Videos -->
+    <div class="slideshow-container" id="slideshow">
+      <!-- Images -->
+      <div class="slide active"><img src="assets/images/photo6.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="assets/images/photo3.jpg" alt="Slide 2"></div>
+      <div class="slide"><img src="assets/images/photo4.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="assets/images/photo5.jpg" alt="Slide 4"></div>
+      <div class="slide"><img src="assets/images/photo6.jpg" alt="Slide 5"></div>
+      <div class="slide"><img src="assets/images/photo7.jpg" alt="Slide 6"></div>
+      <div class="slide"><img src="assets/images/photo8.jpg" alt="Slide 7"></div>
+      <div class="slide"><img src="assets/images/photo9.jpg" alt="Slide 8"></div>
+      <div class="slide"><img src="assets/images/photo10.jpg" alt="Slide 9"></div>
+      <div class="slide"><img src="assets/images/photo11.jpg" alt="Slide 10"></div>
+      <div class="slide"><img src="assets/images/photo12.jpg" alt="Slide 11"></div>
+      <div class="slide"><img src="assets/images/photo13.jpg" alt="Slide 12"></div>
+      <div class="slide"><img src="assets/images/photo14.jpg" alt="Slide 13"></div>
+      <div class="slide"><img src="assets/images/photo15.jpg" alt="Slide 14"></div>
+      <div class="slide"><img src="assets/images/photo16.jpg" alt="Slide 15"></div>
+      <div class="slide"><img src="assets/images/photo17.jpg" alt="Slide 16"></div>
+      <div class="slide"><img src="assets/images/photo18.jpg" alt="Slide 17"></div>
+      <div class="slide"><img src="assets/images/photo19.jpg" alt="Slide 18"></div>
+      <div class="slide"><img src="assets/images/photo20.jpg" alt="Slide 19"></div>
+      <div class="slide"><img src="assets/images/photo21.jpg" alt="Slide 20"></div>
+      <div class="slide"><img src="assets/images/photo23.jpg" alt="Slide 21"></div>
+      <div class="slide"><img src="assets/images/photo24.jpg" alt="Slide 22"></div>
+      <div class="slide"><img src="assets/images/photo25.jpg" alt="Slide 23"></div>
+      <div class="slide"><img src="assets/images/photo26.jpg" alt="Slide 24"></div>
+      <div class="slide"><img src="assets/images/photo27.jpg" alt="Slide 25"></div>
+      <div class="slide"><img src="assets/images/photo29.jpg" alt="Slide 26"></div>
+      <div class="slide"><img src="assets/images/photo30.jpg" alt="Slide 27"></div>
+      <div class="slide"><img src="assets/images/photo31.jpg" alt="Slide 28"></div>
+      <div class="slide"><img src="assets/images/photo32.jpg" alt="Slide 29"></div>
+      <div class="slide"><img src="assets/images/photo33.jpg" alt="Slide 30"></div>
+
+      <!-- Videos -->
+      <div class="slide"><video muted><source src="assets/videos/message1.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message2.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message3.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message4.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message5.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message6.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message7.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message8.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message9.mp4" type="video/mp4"></video></div>
+      <div class="slide"><video muted><source src="assets/videos/message10.mp4" type="video/mp4"></video></div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <!-- Pause/Play Button -->
+    <div class="controls">
+      <button id="toggle-play">Pause</button>
+    </div>
+  </div>
+
+  <!-- Music -->
+ <audio id="backgroundMusic" autoplay loop>
+  <source src="assets/music/birthday_song.mp3" type="audio/mpeg" />
+</audio>
+<div id="blessingMessage" class="hidden blessing">
+  <h3>🔱 🌸 GOD BLESS YOU 🌸 🔱</h1>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
